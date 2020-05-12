@@ -64,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
             // 画面遷移のコード
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => NextPage(),),
+              MaterialPageRoute(builder: (context) => NextPage()),
             );
           },
         ),
