@@ -34,6 +34,8 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  String text = 'NEXT';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -58,15 +60,18 @@ class _MyHomePageState extends State<MyHomePage> {
 //          ),
 //        ),
         child: RaisedButton(
-          child: Text('NEXT'),
-          onPressed: (){
+          child: Text(text),
+          onPressed: () async {
             // ここにタップしたら反応するコードをかく
             // 画面遷移のコード
-            Navigator.push(
+            final result = await Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => NextPage()),
+              MaterialPageRoute(builder: (context) => NextPage('syuheifujitaさん')),
             );
+            print(result);
+            text = result;
           },
+
         ),
       ),
       floatingActionButton: FloatingActionButton(
