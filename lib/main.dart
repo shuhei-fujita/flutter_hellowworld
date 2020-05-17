@@ -58,20 +58,29 @@ class _MyHomePageState extends State<MyHomePage> {
 //              Text('syuheifujita'),
 //            ],
 //          ),
-//        ),
-        child: RaisedButton(
-          child: Text(text),
-          onPressed: () async {
-            // ここにタップしたら反応するコードをかく
-            // 画面遷移のコード
-            final result = await Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => NextPage('syuheifujitaさん')),
-            );
-            print(result);
-            text = result;
-          },
-
+//        ),s
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Icon(
+              Icons.directions_car,
+              size: 200,
+            ),
+            Image.asset('images/syuheifujita_twitter.jpg',),
+            RaisedButton(
+              child: Text(text),
+              onPressed: () async {
+                // ここにタップしたら反応するコードをかく
+                // 画面遷移のコード
+                final result = await Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NextPage('syuheifujitaさん')),
+                );
+                print(result);
+                text = result;
+              },
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
