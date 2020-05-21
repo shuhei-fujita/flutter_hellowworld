@@ -62,9 +62,24 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Container(
+              child:
+              Text(
+                "Syuhei",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 30,
+                    color: Colors.green,
+                    fontWeight: FontWeight.bold,
+                    fontStyle: FontStyle.italic,
+                    decoration: TextDecoration.underline
+                ),
+              ),
+            ),
+            Text('Syuhei'),
             Icon(
               Icons.directions_car,
-              size: 200,
+              size: 50,
             ),
             Image.asset('images/syuheifujita_twitter.jpg',),
             RaisedButton(
